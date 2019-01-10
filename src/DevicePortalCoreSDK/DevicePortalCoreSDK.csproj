@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Copyright>minusoneteam</Copyright>
+    <PackageProjectUrl>https://github.com/minusoneteam/DevicePortalCoreSDK</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/minusoneteam/DevicePortalCoreSDK</RepositoryUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>C:\Users\koskit\source\repos\minusoneteam\DevicePortalCoreSDK\src\DevicePortalCoreSDK\DevicePortalCoreSDK.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
