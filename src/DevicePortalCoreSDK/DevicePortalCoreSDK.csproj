@@ -15,4 +15,8 @@
     <DocumentationFile>C:\Users\koskit\source\repos\minusoneteam\DevicePortalCoreSDK\src\DevicePortalCoreSDK\DevicePortalCoreSDK.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
 </Project>

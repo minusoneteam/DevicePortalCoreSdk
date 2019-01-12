@@ -4,3 +4,5 @@
 
 /src/.vs/DevicePortalCoreSDK/v15
 /.vs
+/src/DevicePortalCoreSDK/bin
+/src/obj

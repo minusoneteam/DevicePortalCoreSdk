@@ -1,0 +1,567 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevicePortalCoreSDK</name>
+    </assembly>
+    <members>
+        <member name="T:DevicePortalCoreSDK.Attributes.Networking.AdapterTypeValueAttribute">
+            <summary>
+            Attribute that holds a string representation for the actual value of an adapter.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Attributes.Networking.AdapterTypeValueAttribute.Value">
+            <summary>
+            The value of the adapter.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Attributes.Networking.AdapterTypeValueAttribute.#ctor(System.String)">
+            <summary>
+            Default class constructor that initializes an instance of the current object.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Converters.Networking.AdapterTypeConverter">
+            <summary>
+            Converter class for explicit implementation for converting objects to and from json files.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Converters.Networking.AdapterTypeConverter.ProcessorType">
+            <summary>
+            The type of Processor that uses this converter.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.AdapterTypeConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether this instance can convert the specified object type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns>
+            True if this instance can convert the specified object type; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.AdapterTypeConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The Newtonsoft.Json.JsonReader to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.AdapterTypeConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The Newtonsoft.Json.JsonWriter to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Converters.Networking.IPAddressConverter">
+            <summary>
+            Converter class for explicit implementation for converting objects to and from json files.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Converters.Networking.IPAddressConverter.ProcessorType">
+            <summary>
+            The type of Processor that uses this converter.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.IPAddressConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether this instance can convert the specified object type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns>
+            True if this instance can convert the specified object type; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.IPAddressConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The Newtonsoft.Json.JsonReader to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.IPAddressConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The Newtonsoft.Json.JsonWriter to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Converters.Networking.IPEndPointConverter">
+            <summary>
+            Converter class for explicit implementation for converting objects to and from json files.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Converters.Networking.IPEndPointConverter.ProcessorType">
+            <summary>
+            The type of Processor that uses this converter.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.IPEndPointConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether this instance can convert the specified object type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns>
+            True if this instance can convert the specified object type; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.IPEndPointConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The Newtonsoft.Json.JsonReader to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.IPEndPointConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The Newtonsoft.Json.JsonWriter to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Converters.Networking.PhysicalAddressConverter">
+            <summary>
+            Converter class for explicit implementation for converting objects to and from json files.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Converters.Networking.PhysicalAddressConverter.ProcessorType">
+            <summary>
+            The type of Processor that uses this converter.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.PhysicalAddressConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether this instance can convert the specified object type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns>
+            True if this instance can convert the specified object type; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.PhysicalAddressConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The Newtonsoft.Json.JsonReader to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Converters.Networking.PhysicalAddressConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The Newtonsoft.Json.JsonWriter to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.DevicePortalProcessor">
+            <summary>
+            Class used for managing requests on the device portal api of a windows iot operating system.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.DevicePortalProcessor.Networking">
+            <summary>
+            Gets the networking processor that contains request methods related to networking.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.DevicePortalProcessor.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates an instance of the class and stores the device portal url that will be used
+            by all device portal request methods.
+            </summary>
+            <param name="devicePortalUrl">
+            The device portal url. E.g. if the manager is used from an application within the 
+            windows iot, the address will be localhost. And if it is on a raspberry pi, then the
+            default address and port should be "http://localhost:8080/". The slash at the end is
+            optional and automatically concatenated if missing.
+            </param>
+            <param name="username">Username with authority on the device portal.</param>
+            <param name="password">The password of the user.</param>
+        </member>
+        <member name="M:DevicePortalCoreSDK.DevicePortalProcessor.#ctor(System.String,System.Net.NetworkCredential)">
+            <summary>
+            Creates an instance of the class and stores the device portal url that will be used
+            by all device portal request methods.
+            </summary>
+            <param name="devicePortalUrl">
+            The device portal url. E.g. if the manager is used from an application within the 
+            windows iot, the address will be localhost. And if it is on a raspberry pi, then the
+            default address and port should be "http://localhost:8080/". The slash at the end is
+            optional and automatically concatenated if missing.
+            </param>
+            <param name="credentials">The credentials that will be used by the processor.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Enumerations.EnumerationExtensions">
+            <summary>
+            Class with extension methods for enumerations.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Enumerations.EnumerationExtensions.GetAdapterValue(DevicePortalCoreSDK.Enumerations.Networking.AdapterType)">
+            <summary>
+            Gets the adapter's type string representation.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Enumerations.EnumerationExtensions.ParseToAdapterType(System.String)">
+            <summary>
+            Converts a string to it's matching <see cref="T:DevicePortalCoreSDK.Enumerations.Networking.AdapterType"/> by searching through the
+            adapter types' values.
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Enumerations.Networking.AdapterType">
+            <summary>
+            Enumeration with values for determining the type of a network adapter.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Enumerations.Networking.AdapterType.Unknown">
+            <summary>
+            Unknown type adapter.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Enumerations.Networking.AdapterType.Ethernet">
+            <summary>
+            Ethernet adapter.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Enumerations.Networking.AdapterType.IEEE80211">
+            <summary>
+            IEEE 802.11 adapter. 
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration">
+            <summary>
+            Model that holds information on how an adapter is configured.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.DDNSEnabled">
+            <summary>
+            Bool indicating if dynamic DNS is enabled or not.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.Description">
+            <summary>
+            The description of the adapter.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.HardwareAddress">
+            <summary>
+            The physical address of the adapter (MAC Address).
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.Index">
+            <summary>
+            The index of the adapter on the device.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.Name">
+            <summary>
+            The name of the adapter.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.Type">
+            <summary>
+            The type of the adapter.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.DHCP">
+            <summary>
+            The DHCP configuration of the adapter.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.WINS">
+            <summary>
+            The Windows Internet Name Service configuration of the adapter.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.Gateways">
+            <summary>
+            The configured Gateways of the adapter with their masks.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.IpAddresses">
+            <summary>
+            The configured IP Addresses of the adapter with their masks.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration.DnsAddresses">
+            <summary>
+            The configured DNS Addresses of the adapter.
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Models.Networking.Components.DHCP">
+            <summary>
+            Model that holds information related to an adapter's Dynamic Host Configuration Protocol.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.DHCP.LeaseExpires">
+            <summary>
+            Number of leases expired.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.DHCP.LeaseObtained">
+            <summary>
+            Number of leases obtained.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.DHCP.Address">
+            <summary>
+            The address of the DHCP.
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Models.Networking.Components.IPAddressMaskPair">
+            <summary>
+            Class that holds a pair of IPAddress and Network Mask.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.IPAddressMaskPair.IPAddress">
+            <summary>
+            The ip address.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.IPAddressMaskPair.Mask">
+            <summary>
+            The network mask.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Models.Networking.Components.IPAddressMaskPair.#ctor(System.Net.IPAddress,System.Net.IPAddress)">
+            <summary>
+            Initializes a new instance of the class with the given properties.
+            </summary>
+            <param name="ipaddress">The ip address.</param>
+            <param name="mask">The network mask.</param>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Models.Networking.Components.IPAddressMaskPair.#ctor">
+            <summary>
+            Initializes a new instance of the class with empty properties.
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Models.Networking.Components.WINS">
+            <summary>
+            Model for Windows Internet Name Service configuration.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.WINS.Primary">
+            <summary>
+            Primary configuration.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.Components.WINS.Secondary">
+            <summary>
+            Secondary configuration.
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration">
+            <summary>
+            Configuration model used for configuring an IPv4 adapter. 
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration.Name">
+            <summary>
+            The name of the adapter.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration.IPAddress">
+            <summary>
+            The IPAddress to set.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration.SubnetMask">
+            <summary>
+            The SubnetMask to set.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration.DefaultGateway">
+            <summary>
+            The Default Gateway to set.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration.PrimaryDNS">
+            <summary>
+            The Primary DNS to set.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration.SecondaryDNS">
+            <summary>
+            The Secondary DNS to set.
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Models.Networking.NetworkConfiguration">
+            <summary>
+            Network Configuration class that holds a list of <see cref="T:DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration"/> 
+            populated by data found on the device.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Models.Networking.NetworkConfiguration.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Models.Networking.NetworkConfiguration.#ctor(System.Collections.Generic.IList{DevicePortalCoreSDK.Models.Networking.Components.AdapterConfiguration})">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <param name="list">The list that is wrapped by the new collection.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Models.Requests.RequestModel">
+            <summary>
+            Model class that describes a request.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Requests.RequestModel.Uri">
+            <summary>
+            The Uri address of the request.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Requests.RequestModel.Method">
+            <summary>
+            The method of the request.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Requests.RequestModel.Body">
+            <summary>
+            The body of the request.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Requests.RequestModel.Credentials">
+            <summary>
+            The credentials that will be used to authorize the request.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Requests.RequestModel.SerializerSettings">
+            <summary>
+            Additional custom serialization settings that will be used when serializing the request
+            and deserializing the response.
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Processors.BaseProcessor">
+            <summary>
+            Parent class for all processors.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Processors.BaseProcessor.SerializerSettings">
+            <summary>
+            The additional custom serialization settings of the class, used in requests.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Processors.BaseProcessor.DevicePortalUrl">
+            <summary>
+            The device portal url used in each individual api request controller.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Processors.BaseProcessor.Credentials">
+            <summary>
+            The authorization headers used in every request.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.BaseProcessor.#ctor(System.String,System.Net.NetworkCredential)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DevicePortalCoreSDK.Processors.BaseProcessor"/> class and builds the
+            <see cref="P:DevicePortalCoreSDK.Processors.BaseProcessor.SerializerSettings"/> field.
+            </summary>
+            <param name="devicePortalUrl">
+            The device portal url. E.g. if the manager is used from an application within the 
+            windows iot, the address will be localhost. And if it is on a raspberry pi, then the
+            default address and port should be "http://localhost:8080/". The slash at the end is
+            optional and automatically concatenated if missing.
+            </param>
+            <param name="credentials">The credentials that will be used by the processor.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Processors.Networking.Contracts.IIPv4Configuration">
+            <summary>
+            Contract interface that contains functions for device's ipv4 network configuration.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.Networking.Contracts.IIPv4Configuration.Put(DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration)">
+            <summary>
+            Sends a configuration request for an IPv4 adapter.
+            </summary>
+            <param name="request">The model that contains all the new configuration settings.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Processors.Networking.Contracts.INetworkingConfiguration">
+            <summary>
+            Contract interface that contains functions for device's network configuration.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.Networking.Contracts.INetworkingConfiguration.Get">
+            <summary>
+            Gets the network's configuration from the device for all available adapters.
+            </summary>
+            <returns>
+            A new instance of <see cref="T:DevicePortalCoreSDK.Models.Networking.NetworkConfiguration"/> populated with all available 
+            adapters that were found on the device.
+            </returns>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor">
+            <summary>
+            Processor class that handles networking related request.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.Configuration">
+            <summary>
+            Network configuration requests.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.DevicePortalCoreSDK#Processors#Networking#Contracts#INetworkingConfiguration#Get">
+            <summary>
+            The device's network configuration functions.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.IPv4Configuration">
+            <summary>
+            IPv4 configuration requests.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.DevicePortalCoreSDK#Processors#Networking#Contracts#IIPv4Configuration#Put(DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration)">
+            <summary>
+            The device's ipv4 configuration functions.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.#ctor(System.String,System.Net.NetworkCredential)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor"/> class.
+            </summary>
+            <param name="devicePortalUrl">
+            The device portal url. E.g. if the manager is used from an application within the 
+            windows iot, the address will be localhost. And if it is on a raspberry pi, then the
+            default address and port should be "http://localhost:8080/". The slash at the end is
+            optional and automatically concatenated if missing.
+            </param>
+            <param name="credentials">The credentials that will be used by the processor.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Request`1">
+            <summary>
+            Class that handles request to the device portal.
+            </summary> 
+        </member>
+        <member name="P:DevicePortalCoreSDK.Request`1.RequestModel">
+            <summary>
+            The request model that build the class.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Request`1.Execute">
+            <summary>
+            Sends the request.
+            </summary>
+            <returns>The response body deserialized.</returns>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Request`1.#ctor(DevicePortalCoreSDK.Models.Requests.RequestModel)">
+            <summary>
+            Default class constructor that initializes a new instance of the class.
+            </summary>
+            <param name="requestModel">The request model.</param>
+        </member>
+    </members>
+</doc>
