@@ -1,3 +1,6 @@
+## Disclaimer
+This project is a work in progress with no release yet.
+
 # DevicePortalCoreSDK
 Windows Iot - Device Portal - Core API - Software Development Kit
 
