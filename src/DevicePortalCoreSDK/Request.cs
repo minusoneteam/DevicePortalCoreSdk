@@ -29,7 +29,8 @@ namespace DevicePortalCoreSDK
 
             HttpRequestMessage requestMessage = new HttpRequestMessage()
             {
-                Content = new StringContent(requestBody, Encoding.UTF8),
+                Content = RequestModel.Method == HttpMethod.Get ?
+                    null : new StringContent(requestBody, Encoding.UTF8),
                 Method = RequestModel.Method,
                 RequestUri = RequestModel.Uri
             };

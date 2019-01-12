@@ -415,6 +415,16 @@
             </summary>
             <param name="list">The list that is wrapped by the new collection.</param>
         </member>
+        <member name="T:DevicePortalCoreSDK.Models.Networking.NetworkConfigurationResponse">
+            <summary>
+            Internal class used for deserializing response body.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.Networking.NetworkConfigurationResponse.Adapters">
+            <summary>
+            The adapters of the network configuration.
+            </summary>
+        </member>
         <member name="T:DevicePortalCoreSDK.Models.Requests.RequestModel">
             <summary>
             Model class that describes a request.

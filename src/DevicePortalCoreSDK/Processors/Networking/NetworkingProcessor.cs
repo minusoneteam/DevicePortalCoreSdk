@@ -2,6 +2,7 @@
 using DevicePortalCoreSDK.Models.Requests;
 using DevicePortalCoreSDK.Processors.Networking.Contracts;
 using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 
@@ -30,10 +31,13 @@ namespace DevicePortalCoreSDK.Processors.Networking
                 Credentials = Credentials,
                 Method = HttpMethod.Get,
                 SerializerSettings = SerializerSettings,
-                Uri = new Uri("api/networking/ipv4config"),
+                Uri = new Uri(DevicePortalUrl + "api/networking/ipconfig"),
             };
 
-            return new Request<NetworkConfiguration>(requestModel).Execute();
+            NetworkConfigurationResponse response =
+                new Request<NetworkConfigurationResponse>(requestModel).Execute();
+
+            return new NetworkConfiguration(response.Adapters.ToList());
         }
 
         #endregion INetworkingConfiguration implementation
@@ -54,9 +58,9 @@ namespace DevicePortalCoreSDK.Processors.Networking
             {
                 Body = configuration,
                 Credentials = Credentials,
-                Method = HttpMethod.Get,
+                Method = HttpMethod.Put,
                 SerializerSettings = SerializerSettings,
-                Uri = new Uri("api/networking/ipv4config"),
+                Uri = new Uri(DevicePortalUrl + "api/networking/ipv4config"),
             };
 
             new Request<string>(requestModel).Execute();
