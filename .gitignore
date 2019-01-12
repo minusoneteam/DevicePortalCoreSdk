@@ -2,7 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/src/.vs/DevicePortalCoreSDK/v15
 /.vs
+/src/.vs
 /src/DevicePortalCoreSDK/bin
 /src/DevicePortalCoreSDK/obj
+
