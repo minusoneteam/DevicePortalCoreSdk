@@ -17,7 +17,7 @@ namespace DevicePortalCoreSDK.Processors
         /// <summary>
         /// Gets the remote device's machine name.
         /// </summary>
-        public string GetMachineName()
+        public MachineNameInformation GetMachineName()
         {
             RequestModel requestModel = new RequestModel()
             {
@@ -28,7 +28,7 @@ namespace DevicePortalCoreSDK.Processors
                 Uri = new Uri(DevicePortalUrl + RequestPaths.OSInformationGetMachineName)
             };
 
-            return new Request<string>(requestModel).Execute();
+            return new Request<MachineNameInformation>(requestModel).Execute();
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace DevicePortalCoreSDK.Processors
         /// <summary>
         /// Gets the device family information from the remote device.
         /// </summary>
-        public DeviceFamily GetDeviceFamily()
+        public DeviceFamilyInformation GetDeviceFamily()
         {
             RequestModel requestModel = new RequestModel()
             {
@@ -62,13 +62,13 @@ namespace DevicePortalCoreSDK.Processors
                 Uri = new Uri(DevicePortalUrl + RequestPaths.OSInformationGetDeviceFamily)
             };
 
-            return new Request<DeviceFamily>(requestModel).Execute();
+            return new Request<DeviceFamilyInformation>(requestModel).Execute();
         }
 
         /// <summary>
         /// Sets a new machine name to the device.
         /// </summary>
-        public void SetMachineName(string machineName)
+        public MachineNameInformation SetMachineName(string machineName)
         {
             RequestModel requestModel = new RequestModel()
             {
@@ -80,7 +80,7 @@ namespace DevicePortalCoreSDK.Processors
                     string.Format(RequestPaths.OSInformationPostMachineName, machineName))
             };
 
-            new Request<DeviceFamily>(requestModel).Execute();
+            return new Request<MachineNameInformation>(requestModel).Execute();
         }
 
         #endregion Public Methods

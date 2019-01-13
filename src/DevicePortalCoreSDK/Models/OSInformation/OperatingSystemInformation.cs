@@ -1,4 +1,6 @@
-﻿namespace DevicePortalCoreSDK.Models.OSInformation
+﻿using Newtonsoft.Json;
+
+namespace DevicePortalCoreSDK.Models.OSInformation
 {
     /// <summary>
     /// Model class with operating system information of a device.
@@ -8,26 +10,37 @@
         /// <summary>
         /// The computer name.
         /// </summary>
+        [JsonProperty("ComputerName")]
         public string ComputerName { get; set; }
+
+        /// <summary>
+        /// The language of the operating system.
+        /// </summary>
+        [JsonProperty("Language")]
+        public string Language { get; set; }
 
         /// <summary>
         /// The edition of the operating system.
         /// </summary>
-        public string OsEdition { get; set; }
+        [JsonProperty("OsEdition")]
+        public string Edition { get; set; }
 
         /// <summary>
         /// The edition id of the operating system.
         /// </summary>
-        public string OsEditionId { get; set; }
+        [JsonProperty("OsEditionId")]
+        public string EditionId { get; set; }
 
         /// <summary>
         /// The version of the operating system.
         /// </summary>
-        public string OsVersion { get; set; }
+        [JsonProperty("OsVersion")]
+        public string Version { get; set; }
 
         /// <summary>
-        /// The platform of the device.
+        /// The platform of the operating system.
         /// </summary>
+        [JsonProperty("Platform")]
         public string Platform { get; set; }
     }
 }

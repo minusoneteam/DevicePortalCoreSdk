@@ -481,14 +481,24 @@
             The adapters of the network configuration.
             </summary>
         </member>
-        <member name="T:DevicePortalCoreSDK.Models.OSInformation.DeviceFamily">
+        <member name="T:DevicePortalCoreSDK.Models.OSInformation.DeviceFamilyInformation">
             <summary>
             Model class with information about the device family.
             </summary>
         </member>
-        <member name="P:DevicePortalCoreSDK.Models.OSInformation.DeviceFamily.DeviceType">
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.DeviceFamilyInformation.DeviceType">
             <summary>
             The device type.
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Models.OSInformation.MachineNameInformation">
+            <summary>
+            Model class with information about the machine name.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.MachineNameInformation.ComputerName">
+            <summary>
+            The name of the computer.
             </summary>
         </member>
         <member name="T:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation">
@@ -501,24 +511,29 @@
             The computer name.
             </summary>
         </member>
-        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.OsEdition">
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.Language">
+            <summary>
+            The language of the operating system.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.Edition">
             <summary>
             The edition of the operating system.
             </summary>
         </member>
-        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.OsEditionId">
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.EditionId">
             <summary>
             The edition id of the operating system.
             </summary>
         </member>
-        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.OsVersion">
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.Version">
             <summary>
             The version of the operating system.
             </summary>
         </member>
         <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.Platform">
             <summary>
-            The platform of the device.
+            The platform of the operating system.
             </summary>
         </member>
         <member name="T:DevicePortalCoreSDK.Models.Requests.RequestModel">
