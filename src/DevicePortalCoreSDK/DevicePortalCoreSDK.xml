@@ -20,6 +20,51 @@
             </summary>
             <param name="value"></param>
         </member>
+        <member name="T:DevicePortalCoreSDK.Constants.RequestPaths">
+            <summary>
+            Class that holds constant values about the request paths.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Constants.RequestPaths.OSInformationGetMachineName">
+            <summary>
+            Api path for getting the machine name.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Constants.RequestPaths.OSInformationGetOSInformation">
+            <summary>
+            Api path for getting operating system's information.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Constants.RequestPaths.OSInformationGetDeviceFamily">
+            <summary>
+            Api path for getting the device family.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Constants.RequestPaths.OSInformationPostMachineName">
+            <summary>
+            Api path for posting the machine name.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Constants.RequestPaths.RemoteControlPostRestart">
+            <summary>
+            Api path for restarting the device.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Constants.RequestPaths.RemoteControlPostShutdown">
+            <summary>
+            Api path for shutting down the device.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Constants.RequestPaths.NetworkingGetCurrentIPConfiguration">
+            <summary>
+            Api path for getting the current ip configuration of the device.
+            </summary>
+        </member>
+        <member name="F:DevicePortalCoreSDK.Constants.RequestPaths.NetworkingSetAStaticIpAddress">
+            <summary>
+            Api path for setting the ipv4 configuration of the device.
+            </summary>
+        </member>
         <member name="T:DevicePortalCoreSDK.Converters.Networking.AdapterTypeConverter">
             <summary>
             Converter class for explicit implementation for converting objects to and from json files.
@@ -176,6 +221,17 @@
         <member name="P:DevicePortalCoreSDK.DevicePortalProcessor.Networking">
             <summary>
             Gets the networking processor that contains request methods related to networking.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.DevicePortalProcessor.RemoteControl">
+            <summary>
+            Gets the networking processor that contains request methods related to networking.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.DevicePortalProcessor.OSInformation">
+            <summary>
+            Gets the Operating System Information processor that contains request methods related
+            to the operating system of the device.
             </summary>
         </member>
         <member name="M:DevicePortalCoreSDK.DevicePortalProcessor.#ctor(System.String,System.String,System.String)">
@@ -425,6 +481,46 @@
             The adapters of the network configuration.
             </summary>
         </member>
+        <member name="T:DevicePortalCoreSDK.Models.OSInformation.DeviceFamily">
+            <summary>
+            Model class with information about the device family.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.DeviceFamily.DeviceType">
+            <summary>
+            The device type.
+            </summary>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation">
+            <summary>
+            Model class with operating system information of a device.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.ComputerName">
+            <summary>
+            The computer name.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.OsEdition">
+            <summary>
+            The edition of the operating system.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.OsEditionId">
+            <summary>
+            The edition id of the operating system.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.OsVersion">
+            <summary>
+            The version of the operating system.
+            </summary>
+        </member>
+        <member name="P:DevicePortalCoreSDK.Models.OSInformation.OperatingSystemInformation.Platform">
+            <summary>
+            The platform of the device.
+            </summary>
+        </member>
         <member name="T:DevicePortalCoreSDK.Models.Requests.RequestModel">
             <summary>
             Model class that describes a request.
@@ -489,59 +585,88 @@
             </param>
             <param name="credentials">The credentials that will be used by the processor.</param>
         </member>
-        <member name="T:DevicePortalCoreSDK.Processors.Networking.Contracts.IIPv4Configuration">
-            <summary>
-            Contract interface that contains functions for device's ipv4 network configuration.
-            </summary>
-        </member>
-        <member name="M:DevicePortalCoreSDK.Processors.Networking.Contracts.IIPv4Configuration.Put(DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration)">
-            <summary>
-            Sends a configuration request for an IPv4 adapter.
-            </summary>
-            <param name="request">The model that contains all the new configuration settings.</param>
-        </member>
-        <member name="T:DevicePortalCoreSDK.Processors.Networking.Contracts.INetworkingConfiguration">
-            <summary>
-            Contract interface that contains functions for device's network configuration.
-            </summary>
-        </member>
-        <member name="M:DevicePortalCoreSDK.Processors.Networking.Contracts.INetworkingConfiguration.Get">
-            <summary>
-            Gets the network's configuration from the device for all available adapters.
-            </summary>
-            <returns>
-            A new instance of <see cref="T:DevicePortalCoreSDK.Models.Networking.NetworkConfiguration"/> populated with all available 
-            adapters that were found on the device.
-            </returns>
-        </member>
-        <member name="T:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor">
+        <member name="T:DevicePortalCoreSDK.Processors.NetworkingProcessor">
             <summary>
             Processor class that handles networking related request.
             </summary>
         </member>
-        <member name="P:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.Configuration">
+        <member name="M:DevicePortalCoreSDK.Processors.NetworkingProcessor.GetConfiguration">
             <summary>
-            Network configuration requests.
+            Gets the device's network configuration.
             </summary>
         </member>
-        <member name="M:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.DevicePortalCoreSDK#Processors#Networking#Contracts#INetworkingConfiguration#Get">
+        <member name="M:DevicePortalCoreSDK.Processors.NetworkingProcessor.PutConfiguration(DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration)">
             <summary>
-            The device's network configuration functions.
+            Updates the device's ipv4 configuration.
             </summary>
         </member>
-        <member name="P:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.IPv4Configuration">
+        <member name="M:DevicePortalCoreSDK.Processors.NetworkingProcessor.#ctor(System.String,System.Net.NetworkCredential)">
             <summary>
-            IPv4 configuration requests.
+            Initializes a new instance of the <see cref="T:DevicePortalCoreSDK.Processors.NetworkingProcessor"/> class.
+            </summary>
+            <param name="devicePortalUrl">
+            The device portal url. E.g. if the manager is used from an application within the 
+            windows iot, the address will be localhost. And if it is on a raspberry pi, then the
+            default address and port should be "http://localhost:8080/". The slash at the end is
+            optional and automatically concatenated if missing.
+            </param>
+            <param name="credentials">The credentials that will be used by the processor.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Processors.OSInformationProcessor">
+            <summary>
+            Processor class that handles Operating System related request.
             </summary>
         </member>
-        <member name="M:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.DevicePortalCoreSDK#Processors#Networking#Contracts#IIPv4Configuration#Put(DevicePortalCoreSDK.Models.Networking.IPv4AdapterConfiguration)">
+        <member name="M:DevicePortalCoreSDK.Processors.OSInformationProcessor.GetMachineName">
             <summary>
-            The device's ipv4 configuration functions.
+            Gets the remote device's machine name.
             </summary>
         </member>
-        <member name="M:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor.#ctor(System.String,System.Net.NetworkCredential)">
+        <member name="M:DevicePortalCoreSDK.Processors.OSInformationProcessor.GetOSInformation">
             <summary>
-            Initializes a new instance of the <see cref="T:DevicePortalCoreSDK.Processors.Networking.NetworkingProcessor"/> class.
+            Gets the operating system information from the remote device.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.OSInformationProcessor.GetDeviceFamily">
+            <summary>
+            Gets the device family information from the remote device.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.OSInformationProcessor.SetMachineName(System.String)">
+            <summary>
+            Sets a new machine name to the device.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.OSInformationProcessor.#ctor(System.String,System.Net.NetworkCredential)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DevicePortalCoreSDK.Processors.NetworkingProcessor"/> class.
+            </summary>
+            <param name="devicePortalUrl">
+            The device portal url. E.g. if the manager is used from an application within the 
+            windows iot, the address will be localhost. And if it is on a raspberry pi, then the
+            default address and port should be "http://localhost:8080/". The slash at the end is
+            optional and automatically concatenated if missing.
+            </param>
+            <param name="credentials">The credentials that will be used by the processor.</param>
+        </member>
+        <member name="T:DevicePortalCoreSDK.Processors.RemoteControlProcessor">
+            <summary>
+            Processor class that handles remote control related request.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.RemoteControlProcessor.Restart">
+            <summary>
+            Sends a restart request to the remote device.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.RemoteControlProcessor.Shutdown">
+            <summary>
+            Sends a shutdown request to the remote device.
+            </summary>
+        </member>
+        <member name="M:DevicePortalCoreSDK.Processors.RemoteControlProcessor.#ctor(System.String,System.Net.NetworkCredential)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DevicePortalCoreSDK.Processors.RemoteControlProcessor"/> class.
             </summary>
             <param name="devicePortalUrl">
             The device portal url. E.g. if the manager is used from an application within the 
@@ -563,7 +688,7 @@
         </member>
         <member name="M:DevicePortalCoreSDK.Request`1.Execute">
             <summary>
-            Sends the request.
+            Sends the request and returns the response serialized to the class generic object.
             </summary>
             <returns>The response body deserialized.</returns>
         </member>

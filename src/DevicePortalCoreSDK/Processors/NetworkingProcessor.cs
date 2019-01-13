@@ -1,29 +1,24 @@
-﻿using DevicePortalCoreSDK.Models.Networking;
+﻿using DevicePortalCoreSDK.Constants;
+using DevicePortalCoreSDK.Models.Networking;
 using DevicePortalCoreSDK.Models.Requests;
-using DevicePortalCoreSDK.Processors.Networking.Contracts;
 using System;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 
-namespace DevicePortalCoreSDK.Processors.Networking
+namespace DevicePortalCoreSDK.Processors
 {
     /// <summary>
     /// Processor class that handles networking related request.
     /// </summary>
-    public class NetworkingProcessor : BaseProcessor, INetworkingConfiguration, IIPv4Configuration
+    public class NetworkingProcessor : BaseProcessor
     {
-        #region INetworkingConfiguration implementation
+        #region Public Methods
 
         /// <summary>
-        /// Network configuration requests.
+        /// Gets the device's network configuration.
         /// </summary>
-        public INetworkingConfiguration Configuration { get { return this; } }
-
-        /// <summary>
-        /// The device's network configuration functions.
-        /// </summary>
-        NetworkConfiguration INetworkingConfiguration.Get()
+        public NetworkConfiguration GetConfiguration()
         {
             RequestModel requestModel = new RequestModel()
             {
@@ -31,7 +26,7 @@ namespace DevicePortalCoreSDK.Processors.Networking
                 Credentials = Credentials,
                 Method = HttpMethod.Get,
                 SerializerSettings = SerializerSettings,
-                Uri = new Uri(DevicePortalUrl + "api/networking/ipconfig"),
+                Uri = new Uri(DevicePortalUrl + RequestPaths.NetworkingGetCurrentIPConfiguration)
             };
 
             NetworkConfigurationResponse response =
@@ -40,19 +35,10 @@ namespace DevicePortalCoreSDK.Processors.Networking
             return new NetworkConfiguration(response.Adapters.ToList());
         }
 
-        #endregion INetworkingConfiguration implementation
-
-        #region IPv4Configuration implementation
-
         /// <summary>
-        /// IPv4 configuration requests.
+        /// Updates the device's ipv4 configuration.
         /// </summary>
-        public IIPv4Configuration IPv4Configuration { get { return this; } }
-
-        /// <summary>
-        /// The device's ipv4 configuration functions.
-        /// </summary>
-        void IIPv4Configuration.Put(IPv4AdapterConfiguration configuration)
+        public void PutConfiguration(IPv4AdapterConfiguration configuration)
         {
             RequestModel requestModel = new RequestModel()
             {
@@ -60,13 +46,13 @@ namespace DevicePortalCoreSDK.Processors.Networking
                 Credentials = Credentials,
                 Method = HttpMethod.Put,
                 SerializerSettings = SerializerSettings,
-                Uri = new Uri(DevicePortalUrl + "api/networking/ipv4config"),
+                Uri = new Uri(DevicePortalUrl + RequestPaths.NetworkingSetAStaticIpAddress)
             };
 
             new Request<string>(requestModel).Execute();
         }
 
-        #endregion IPv4Configuration implementation
+        #endregion Public Methods
 
         #region Constructor
 

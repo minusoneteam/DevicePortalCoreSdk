@@ -1,4 +1,4 @@
-﻿using DevicePortalCoreSDK.Processors.Networking;
+﻿using DevicePortalCoreSDK.Processors;
 using System.Net;
 
 namespace DevicePortalCoreSDK
@@ -8,10 +8,27 @@ namespace DevicePortalCoreSDK
     /// </summary>
     public class DevicePortalProcessor
     {
+        #region Processors 
+
         /// <summary>
         /// Gets the networking processor that contains request methods related to networking.
         /// </summary>
         public NetworkingProcessor Networking { get; set; }
+
+        /// <summary>
+        /// Gets the networking processor that contains request methods related to networking.
+        /// </summary>
+        public RemoteControlProcessor RemoteControl { get; set; }
+
+        /// <summary>
+        /// Gets the Operating System Information processor that contains request methods related
+        /// to the operating system of the device.
+        /// </summary>
+        public OSInformationProcessor OSInformation { get; set; }
+
+        #endregion Processors 
+
+        #region Constructors
 
         /// <summary>
         /// Creates an instance of the class and stores the device portal url that will be used
@@ -47,6 +64,10 @@ namespace DevicePortalCoreSDK
                 devicePortalUrl + "/";
 
             Networking = new NetworkingProcessor(devicePortalUrl, credentials);
+            RemoteControl = new RemoteControlProcessor(devicePortalUrl, credentials);
+            OSInformation = new OSInformationProcessor(devicePortalUrl, credentials);
         }
+
+        #endregion Constructors
     }
 }

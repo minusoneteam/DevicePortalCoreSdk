@@ -1,4 +1,4 @@
-﻿using DevicePortalCoreSDK.Processors.Networking;
+﻿using DevicePortalCoreSDK.Processors;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;

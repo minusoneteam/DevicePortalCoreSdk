@@ -17,7 +17,7 @@ namespace DevicePortalCoreSDK
         public RequestModel RequestModel { get; private set; }
 
         /// <summary>
-        /// Sends the request.
+        /// Sends the request and returns the response serialized to the class generic object.
         /// </summary>
         /// <returns>The response body deserialized.</returns>
         public TResponseBody Execute()

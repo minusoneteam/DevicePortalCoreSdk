@@ -1,6 +1,6 @@
 ﻿using DevicePortalCoreSDK.Enumerations;
 using DevicePortalCoreSDK.Enumerations.Networking;
-using DevicePortalCoreSDK.Processors.Networking;
+using DevicePortalCoreSDK.Processors;
 using Newtonsoft.Json;
 using System;
 
