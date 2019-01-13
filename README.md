@@ -49,6 +49,7 @@ devicePortal.Networking.PutConfiguration(newIPv4Config);
 Alternative, if the user does not want to create all processors (for performance issues and whatnot), he can explicitly create each one he needs.
 
 ```C#
-RemoteControlProcessor remoteControlProcessor = new RemoteControlProcessor("http://localhost:8080/", new NetworkCredential("username", "password"));
+RemoteControlProcessor remoteControlProcessor = 
+    new RemoteControlProcessor("http://localhost:8080/", new NetworkCredential("username", "password"));
 remoteControlProcessor.Restart();
 ```
