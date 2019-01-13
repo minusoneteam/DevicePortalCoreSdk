@@ -12,9 +12,19 @@ The initial implementation consists of the "Networking Processor" and more will 
 
 
 # Available Processors
+## OS Information
+1. GetMachineName()
+2. GetOSInformation()
+3. GetDeviceFamily()
+4. SetMachineName(string machineName)
+
+## Remote Control
+1. Restart()
+2. Shutdown()
+
 ## Networking
-1. IPConfiguration.Get()
-2. IPv4Configuration.Put()
+1. GetConfiguration()
+2. PutConfiguration(IPv4AdapterConfiguration configuration)
 
 
 # Examples
@@ -23,7 +33,7 @@ The device portal processor initializes all other processors so the user don't h
 ```C#
 DevicePortalProcessor devicePortal = new DevicePortalProcessor("http://localhost:8080/", "username", "password");
 
-NetworkConfiguration configuration = devicePortal.Networking.Configuration.Get();
+NetworkConfiguration configuration = devicePortal.Networking.GetConfiguration();
 
 IPv4AdapterConfiguration newIPv4Config = new IPv4AdapterConfiguration()
 {
@@ -34,11 +44,11 @@ IPv4AdapterConfiguration newIPv4Config = new IPv4AdapterConfiguration()
     SecondaryDNS = ...,
     SubnetMask = ...
 };
-devicePortal.Networking.IPv4Configuration.Put(newIPv4Config);
+devicePortal.Networking.PutConfiguration(newIPv4Config);
 ```
 Alternative, if the user does not want to create all processors (for performance issues and whatnot), he can explicitly create each one he needs.
 
 ```C#
-NetworkingProcessor networkProcessor = new NetworkingProcessor("http://localhost:8080/", new NetworkCredential("username", "password"));
-NetworkConfiguration configuration = networkProcessor.Configuration.Get();
+RemoteControlProcessor remoteControlProcessor = new RemoteControlProcessor("http://localhost:8080/", new NetworkCredential("username", "password"));
+remoteControlProcessor.Restart();
 ```
